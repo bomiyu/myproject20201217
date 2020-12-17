@@ -1,0 +1,24 @@
+body, html { 
+
+    height: 100%;
+}
+
+.bgimg {
+	border: 0;
+    padding: 0; 
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url("enha2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #a7acc7;
+    
+ position: fixed; 
+}
+
+.navbar.bg-dark {
+    background-color: rgba(0,0,0,.5) !important;
+}
+
+
