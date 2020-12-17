@@ -24,22 +24,27 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 .Nanum-Brush-Script{font-family: 'Nanum Brush Script', sans-serif}
+
+.main-title{
+	color:white;
+	font-size:100px;
+}
 </style>
 
 <title>Insert title here</title>
 </head>
-<body class="bgimg" style="height:1000px">
+<body class="bgimg Nanum-Brush-Script" style="height:1000px">
 
 	<div class="container">
-		<img src="${pageContext.request.contextPath}/images/aaa.jpg"
+		<img src="${pageContext.request.contextPath}/images/sprot1.jpg"
 			alt="Responsive image" width="100%" height="350">
 	</div>
 	<u:navbar />
 
-	<div class="container Nanum-Brush-Script"  style="color:white">
-  <h3>slow and strady wins the race</h3>
+	<div class="container main-title"  >
+  <h3 style="font-size:50px">slow and strady wins the race</h3>
 
-      <pre>같이함께할 운동인들 모여라!</pre> 
+      <div>같이함께할 운동인들 모여라!</div> 
 
 </div>
 
