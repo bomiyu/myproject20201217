@@ -20,7 +20,6 @@
 <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'> 
 
 <link rel= "stylesheet" type="text/css" href="cssboard.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 <style>
 .Nanum-Brush-Script{font-family: 'Nanum Brush Script', sans-serif}
@@ -29,6 +28,8 @@
 	color:white;
 	font-size:100px;
 }
+
+
 </style>
 
 <title>Insert title here</title>

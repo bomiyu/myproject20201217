@@ -21,3 +21,25 @@ body, html {
 }
 
 
+
+.num-col {
+  width: 10%;
+}
+
+.title-col {
+  width: 60%;
+}
+
+.writer-col {
+  width: 20%;
+}
+
+.read-col {
+  width: 10%;
+}
+
+
+.read-col {
+height: 200px;
+}
+
