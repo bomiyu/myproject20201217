@@ -20,9 +20,9 @@
 <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'> 
 
 <link rel= "stylesheet" type="text/css" href="cssboard.css">
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 .Nanum-Brush-Script{font-family: 'Nanum Brush Script', sans-serif}
 
 .main-title{
@@ -33,7 +33,7 @@
 
 <title>Insert title here</title>
 </head>
-<body class="bgimg Nanum-Brush-Script" style="height:1000px">
+<body class="bgimg Nanum-Brush-Script" style="height:1500px">
 
 	<div class="container">
 		<img src="${pageContext.request.contextPath}/images/sprot1.jpg"

@@ -13,8 +13,7 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #a7acc7;
-    
- position: fixed; 
+	background-attachment: fixed;  /* 스크롤해도 배경이미지가 안움직이게끔 */
 }
 
 .navbar.bg-dark {
