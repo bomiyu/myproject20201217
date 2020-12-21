@@ -65,7 +65,7 @@ label {
                 <label for="input1-id">아이디</label>
                 <input id="input1-id" type="text" class="form-control" name="id" value="${param.id }" />
                 <c:if test="${errors.id }">
-                  <small class="form-text text-muted">
+                  <small class="form-text text-light">
                     ID를 입력하세요.
                   </small>
                 </c:if>
@@ -74,7 +74,7 @@ label {
                 <label for="input2-password">패스워드</label>
                 <input id="input2-password" type="password" name="password" class="form-control" />
                 <c:if test="${errors.password }">
-                  <small class="form-text text-muted">
+                  <small class="form-text text-light">
                     암호를 입력하세요.
                   </small>
                 </c:if>

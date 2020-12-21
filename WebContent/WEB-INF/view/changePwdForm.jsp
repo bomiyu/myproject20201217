@@ -65,13 +65,13 @@ label {
                 <input id="input1-curPwd" type="password" class="form-control" name="curPwd" />
                 
                 <c:if test="${errors.curPwd }">
-                  <small class="form-text text-muted">
+                  <small class="form-text text-light">
                현재 암호를 입력하세요.
                   </small>
                 </c:if>
                 
                    <c:if test="${errors.badCurPwd }">
-                  <small class="form-text text-muted">
+                  <small class="form-text text-light">
           		현재 암호와 일치하지 않습니다
                   </small>
      
@@ -85,7 +85,7 @@ label {
                 <label for="input2-newPwd">새 암호</label>
                 <input id="input2-newPwd" type="password" name="newPwd" class="form-control" />
                 <c:if test="${errors.newPwd }">
-                  <small class="form-text text-muted">
+                  <small class="form-text text-light">
                    새 암호를 입력하세요
                   </small>
                 </c:if>

@@ -76,13 +76,12 @@ label {
                 <label for="input1-title">제목</label>
                 <input value="${param.title }" type="text" class="form-control" id="input1-title" name="title" />
                 <c:if test="${errors.title }">
-                  <small class="form-text text-muted">
+                  <small class="form-text text-light">
                     제목을 입력하세요.
                   </small>
                 </c:if>
               </div>
-              
-              <!-- .form-group>label[for=textarea1-content]+textarea.form-control#textarea1-content -->
+            
               <div class="form-group">
                 <label for="textarea1-content">내용</label>
                 <textarea name="" id="textarea1-content" cols="30" rows="10" class="form-control">${param.content }</textarea>
@@ -92,24 +91,6 @@ label {
 		</div>
 	</div>
 </div>
-
-<%-- 
-<div class="container">
-<h1>게시글 쓰기</h1>
-<form action="write.do" method="post">
-  <p>
-    제목 : <br />
-    <input type="text" name="title" value="${param.title }" />
-    <c:if test="${errors.title }">제목을 입력하세요.</c:if>
-  </p>
-  
-  <p>
-    내용 : <br />
-    <textarea name="content" id="" cols="30" rows="5">${param.content }</textarea>
-  </p>
-  <input type="submit" value="새 글 등록" />
-</form>
-</div> --%>
 
 
 </body>

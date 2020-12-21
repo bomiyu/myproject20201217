@@ -45,6 +45,9 @@ label {
 	font-size: 30px;
 }
 
+.small{
+	font-size: 20px;
+}
 
 </style>
 
@@ -59,19 +62,6 @@ label {
 	<u:navbar />
 
 	<div class="container">
-		<!-- 
-    <div class="row">
-      <div class="col-3">
-      	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ex voluptatum tenetur suscipit quod fuga nemo nam molestiae. A minus suscipit similique saepe nam dignissimos aliquam sit obcaecati pariatur natus!</div>
-      </div>
-      <div class="col-6">
-      	<div>Ut amet consequatur impedit ullam at atque sunt. Totam eveniet ducimus a possimus est veritatis architecto excepturi iusto magnam mollitia quae assumenda pariatur earum quibusdam maiores repellat consectetur omnis ab.</div>
-      </div>
-      <div class="col-3">
-      	<div>Aliquam voluptas doloribus esse distinctio est officiis ipsam eaque neque eligendi cum officia illum fugit voluptate voluptatem veritatis eius obcaecati placeat minus dignissimos nisi corporis animi possimus illo beatae modi.</div>
-      </div>
-    </div>
-   -->
 
 		<div class="row">
 			<div class="col-3"></div>
@@ -82,10 +72,10 @@ label {
 						<label for="input1-id">아이디</label> <input type="text" name="id"
 							value="${param.id }" class="form-control" id="input1-id">
 						<c:if test="${errors.id }">
-							<small class="form-text text-muted"> ID를 입력하세요. </small>
+							<small class="small form-text text-light"> ID를 입력하세요. </small>
 						</c:if>
 						<c:if test="${errors.duplicateId }">
-							<small class="form-text text-muted"> 이미 사용중인 아이디입니다. </small>
+							<small class="small form-text text-light"> 이미 사용중인 아이디입니다. </small>
 						</c:if>
 					</div>
 					<div class="form-group">
@@ -93,14 +83,14 @@ label {
 							value="${param.name }" id="input2-name" class="form-control">
 
 						<c:if test="${errors.name }">
-							<small class="form-text text-muted"> 이름을 입력하세요. </small>
+							<small class="form-text text-light"> 이름을 입력하세요. </small>
 						</c:if>
 					</div>
 					<div class="form-group">
 						<label for="input3-password">암호</label> <input type="password"
 							name="password" class="form-control" id="input3-password">
 						<c:if test="${errors.password }">
-							<small class="form-text text-muted"> 암호를 입력하세요. </small>
+							<small class="form-text text-light"> 암호를 입력하세요. </small>
 						</c:if>
 					</div>
 					<div class="form-group">
@@ -108,13 +98,13 @@ label {
 							type="password" name="confirmPassword" class="form-control"
 							id="input4-confirmPassword">
 						<c:if test="${errors.confirmPassword }">
-							<small class="form-text text-muted"> 확인을 입력하세요. </small>
+							<small class="form-text text-light"> 확인을 입력하세요. </small>
 						</c:if>
 						<c:if test="${errors.notMatch }">
-							<small class="form-text text-muted"> 암호와 확인이 일치하지 않습니다. </small>
+							<small class="form-text text-light"> 암호와 확인이 일치하지 않습니다. </small>
 						</c:if>
 					</div>
-					<button type="submit" class="btn btn-primary">회원 가입</button>
+					<button type="submit" class="btn btn-outline-primary">회원 가입</button>
 				</form>
 			</div>
 			<div class="col-3"></div>
