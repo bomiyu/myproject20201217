@@ -29,15 +29,7 @@
 	font-family: 'Nanum Brush Script', sans-serif
 }
 
-h1 {
-	color: white;
-	font-size: 70px;
-}
 
-label {
-	color: white;
-	font-size: 40px;
-}
 
 .form-control {
 	font-size: 30px;

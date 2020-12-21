@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="cssboard.css?after">
+<link rel="stylesheet" type="text/css" href="cssboard.css?ver=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script
@@ -31,22 +31,8 @@
 	font-family: 'Nanum Brush Script', sans-serif
 }
 
-h1 {
-	color: white;
-	font-size: 70px;
-}
-
-label {
-	color: white;
-	font-size: 40px;
-}
-
 .form-control {
 	font-size: 30px;
-}
-
-.small{
-	font-size: 20px;
 }
 
 </style>
@@ -72,10 +58,10 @@ label {
 						<label for="input1-id">아이디</label> <input type="text" name="id"
 							value="${param.id }" class="form-control" id="input1-id">
 						<c:if test="${errors.id }">
-							<small class="small form-text text-light"> ID를 입력하세요. </small>
+							<small  id="small"  class="form-text text-light"> ID를 입력하세요. </small>
 						</c:if>
 						<c:if test="${errors.duplicateId }">
-							<small class="small form-text text-light"> 이미 사용중인 아이디입니다. </small>
+							<small id="small" class=" form-text text-light"> 이미 사용중인 아이디입니다. </small>
 						</c:if>
 					</div>
 					<div class="form-group">
@@ -83,14 +69,14 @@ label {
 							value="${param.name }" id="input2-name" class="form-control">
 
 						<c:if test="${errors.name }">
-							<small class="form-text text-light"> 이름을 입력하세요. </small>
+							<small  id="small"  class=" form-text text-light"> 이름을 입력하세요. </small>
 						</c:if>
 					</div>
 					<div class="form-group">
 						<label for="input3-password">암호</label> <input type="password"
 							name="password" class="form-control" id="input3-password">
 						<c:if test="${errors.password }">
-							<small class="form-text text-light"> 암호를 입력하세요. </small>
+							<small  id="small"  class=" form-text text-light"> 암호를 입력하세요. </small>
 						</c:if>
 					</div>
 					<div class="form-group">
@@ -98,10 +84,10 @@ label {
 							type="password" name="confirmPassword" class="form-control"
 							id="input4-confirmPassword">
 						<c:if test="${errors.confirmPassword }">
-							<small class="form-text text-light"> 확인을 입력하세요. </small>
+							<small  id="small"  class=" form-text text-light"> 확인을 입력하세요. </small>
 						</c:if>
 						<c:if test="${errors.notMatch }">
-							<small class="form-text text-light"> 암호와 확인이 일치하지 않습니다. </small>
+							<small  id="small" class=" form-text text-light"> 암호와 확인이 일치하지 않습니다. </small>
 						</c:if>
 					</div>
 					<button type="submit" class="btn btn-outline-primary">회원 가입</button>

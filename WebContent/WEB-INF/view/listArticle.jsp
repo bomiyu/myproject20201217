@@ -30,15 +30,6 @@
 	font-family: 'Nanum Brush Script', sans-serif
 }
 
-h1 {
-	color: white;
-	font-size: 70px;
-}
-
-label {
-	color: white;
-	font-size: 40px;
-}
 #bgimg{
 		border: 0;
     padding: 0; 
