@@ -29,16 +29,22 @@
 	font-family: 'Nanum Brush Script', sans-serif
 }
 
+h1 {
+	color: white;
+	font-size: 40px;
+}
 
 
 .form-control {
 	font-size: 30px;
 }
+
+
 </style>
 
 <title>Insert title here</title>
 </head>
-<body id="bgimg" class=" Nanum-Brush-Script" style="height:1500px">
+<body id="bgimg" class=" Nanum-Brush-Script" style="height:1500px" OnLoad="myModal();">
 
 	<div class="container">
 		<img src="${pageContext.request.contextPath}/images/sprot1.jpg"
@@ -46,8 +52,14 @@
 	</div>
 	<u:navbar />
 	
+
+	
 <div class="container">
 <h1>${param.name }님, 회원 가입에 성공했습니다.</h1>
+
+
+
+
 </div>
 </body>
 </html>

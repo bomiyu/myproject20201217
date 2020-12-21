@@ -6,14 +6,23 @@ body, html {
 
 h1 {
 	color: white;
-	font-size: 60px;
+	font-size: 40px;
 }
 
 label {
 	color: white;
-	font-size: 30px;
+	font-size: 20px;
 }
 
+td {
+	color: white;
+	font-size: 20px;
+}
+
+th {
+	color: white;
+	font-size: 20px;
+}
 
 #bgimg {
 	border: 0;
@@ -36,24 +45,25 @@ label {
 /*listArticle*/
 .num-col {
   width: 10%;
+  height: 200px;
 }
 
 .title-col {
   width: 60%;
+  height: 200px;
 }
 
 .writer-col {
   width: 20%;
+  height: 200px;
 }
 
 .read-col {
   width: 10%;
+  height: 200px;
 }
 
 
-.read-col {
-height: 200px;
-}
 
 /*error메세지*/
 #small{

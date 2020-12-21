@@ -32,6 +32,22 @@
 .form-control {
 	font-size: 30px;
 }
+#bgimg {
+	border: 0;
+	padding: 0;
+	min-height: 100%;
+	min-width: 100%;
+	background-image: url("../images/enha2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #a7acc7;
+	background-attachment: fixed; /* 스크롤해도 배경이미지가 안움직이게끔 */
+}
+h1 {
+	color: white;
+	font-size: 40px;
+}
 </style>
 
 <title>Insert title here</title>
@@ -45,9 +61,9 @@
 	<u:navbar />
 <div class="container">
   <h1>댓글이 등록되었습니다.</h1>
-  <a href="${root }/article/read.do?no=${param.no }&pageNo=${param.pageNo}">글 보기</a>
+  <a href="${root }/article/read.do?no=${param.no }&pageNo=${param.pageNo}" class="text-light">글 보기</a>
   <br />
-  <a href="javascript:history.back()">Go Back</a>
+  <a href="javascript:history.back()" class="text-light">Go Back</a>
 </div>
 </body>
 </html>

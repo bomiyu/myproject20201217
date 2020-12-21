@@ -33,6 +33,26 @@
 .form-control {
 	font-size: 30px;
 }
+#bgimg {
+	border: 0;
+	padding: 0;
+	min-height: 100%;
+	min-width: 100%;
+	background-image: url("../images/enha2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #a7acc7;
+	background-attachment: fixed; /* 스크롤해도 배경이미지가 안움직이게끔 */
+}
+
+h1 {
+	color: white;
+	font-size: 40px;
+}
+
+
+
 </style>
 
 <title>Insert title here</title>
@@ -46,8 +66,8 @@
 	<u:navbar />
 <div class="container">
   <h1>게시글을 등록했습니다.</h1>
-  <a href="${root }/article/list.do">[게시글목록보기]</a>
-  <a href="${root }/article/read.do?no=${newArticleNo}">[게시글내용보기]</a>
+  <a href="${root }/article/list.do" class="text-light">[게시글목록보기]</a>
+  <a href="${root }/article/read.do?no=${newArticleNo}" class="text-light">[게시글내용보기]</a>
 </div>
 </body>
 </html>

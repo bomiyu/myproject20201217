@@ -29,42 +29,69 @@
 	font-family: 'Nanum Brush Script', sans-serif
 }
 
+#bgimg {
+	border: 0;
+	padding: 0;
+	min-height: 100%;
+	min-width: 100%;
+	background-image: url("../images/enha2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #a7acc7;
+	background-attachment: fixed; /* 스크롤해도 배경이미지가 안움직이게끔 */
+}
 
+h1 {
+	color: white;
+	font-size: 40px;
+}
 
-.form-control {
-	font-size: 30px;
+p {
+	color: white;
+	font-size: 20px;
 }
 </style>
 
 <title>Insert title here</title>
 </head>
-<body id="bgimg" class=" Nanum-Brush-Script" style="height:1500px">
+<body id="bgimg" class=" Nanum-Brush-Script" style="height: 1500px">
 
 	<div class="container">
 		<img src="${pageContext.request.contextPath}/images/sprot1.jpg"
 			alt="Responsive image" width="100%" height="350">
 	</div>
 	<u:navbar />
-<div class="container">
-  <h1>게시글 수정</h1>
-  <form action="modify.do" method="post">
-    <input type="text" name="no" value="${modReq.articleNumber }" hidden >
-    <p>
-    번호 : <br />
-    ${modReq.articleNumber }
-    </p>
-    <p>
-      제목: <br />
-      <input type="text" name="title" value="${modReq.title }" />
-      <c:if test="${errors.title }">제목을 입력하세요.</c:if>
-    </p>
-    <p>
-    내용: <br />
-    <textarea name="content" id="" cols="30" rows="5">${modReq.content }</textarea>
-    </p>
-    <input type="submit" value="글 수정" />
-  </form>
-</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-1"></div>
+			<div class="col-10">
+				<h1>게시글 수정</h1>
+				<form action="modify.do" method="post">
+					<input type="text" name="no" value="${modReq.articleNumber }"
+						hidden="" />
+					<p>번호 : ${modReq.articleNumber }</p>
+					<p>
+						<label for="textarea1-title">제목</label>
+
+						   <input id="input1-title" name="title" type="text" value="${modReq.title }" class="form-control"/>
+						<c:if test="${errors.title }">    <small class="form-text text-muted">
+                  제목을 입력하세요.
+                </small></c:if>
+					</p>
+					<p>
+						<label for="textarea1-content">내용</label>
+						<textarea class="form-control" name="content"
+							id="textarea1-content" cols="30" rows="10">${modReq.content }</textarea>
+					</p>
+					<input type="submit" value="글 수정" class="btn btn-secondary  btn-lg" />
+				</form>
+			</div>
+			<div class="col-1"></div>
+		</div>
+
+	</div>
 </body>
 </html>
 

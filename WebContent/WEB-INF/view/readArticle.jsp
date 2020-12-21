@@ -20,7 +20,7 @@
 <link href='https://fonts.googleapis.com/css?family=Poiret+One'
 	rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" type="text/css" href="cssboard.css">
+<link rel="stylesheet" type="text/css" href="cssboard.css?ver=1">
 <link
 	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
 	rel="stylesheet">
@@ -44,6 +44,28 @@
     background-color: #a7acc7;
 	background-attachment: fixed;  /* 스크롤해도 배경이미지가 안움직이게끔 */
 }
+
+h1 {
+	color: white;
+	font-size: 40px;
+}
+
+td {
+	color: white;
+	font-size: 20px;
+
+}
+
+th {
+	color: white;
+	font-size: 20px;
+}
+
+.read-col {
+  height: 200px;
+}
+
+
 </style>
 
 <title>Insert title here</title>
@@ -57,15 +79,15 @@
 	<u:navbar />
     <div class="container">
     <div class="row">
-      <div class="col-3"></div>
-      <div class="col-6">
+      <div class="col-1"></div>
+      <div class="col-10">
       
 
     <table class="table">
     <tbody>
     	
         <tr>
-      <th scope="row">번호</th>
+      <th scope="row" style="width:15%">번호</th>
       <td>${articleData.article.number }</td>
 
     </tr>
@@ -79,13 +101,10 @@
       <td><c:out value="${articleData.article.title }"></c:out></td>
     </tr>
         <tr>
-         <th scope="row">내용
-
-         </th>
-   
-      
-      
+         <th scope="row">내용 </th>
       <td class="read-col"><c:out value="${articleData.content.content }"></c:out></td>
+
+
     </tr>
       </tbody>
       
@@ -93,11 +112,11 @@
       <tr>
         <td colspan="2"><c:set var="pageNo"
             value="${empty param.pageNo ? '1' : param.pageNo }" /> <a
-          href="list.do?pageNo=${pageNo}">[목록]</a>
+          href="list.do?pageNo=${pageNo}" class="text-light">[목록]</a>
           <c:if
             test="${authUser.id == articleData.article.writer.id}">
-            <a href="modify.do?no=${articleData.article.number }">[게시글수정]</a>
-            <a href="delete.do?no=${articleData.article.number }">[게시글삭제]</a>
+            <a href="modify.do?no=${articleData.article.number }" class="text-light">[게시글수정]</a>
+            <a href="delete.do?no=${articleData.article.number }" class="text-light">[게시글삭제]</a>
           </c:if></td>
       </tr>
       <tr>
@@ -114,6 +133,7 @@
     <u:listReply /> 
     
             </div>
+              <div class="col-1"></div>
       </div>
     </div>
 

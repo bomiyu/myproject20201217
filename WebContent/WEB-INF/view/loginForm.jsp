@@ -51,12 +51,13 @@
   		<div class="col-6">
   			<h1>로그인</h1>
   			<form action="${root }/login.do" method="post">
-              <!-- div.form-group*2>label+input.form-control -->
+
+
               <div class="form-group">
                 <label for="input1-id">아이디</label>
                 <input id="input1-id" type="text" class="form-control" name="id" value="${param.id }" />
                 <c:if test="${errors.id }">
-                  <small class="form-text text-light">
+                  <small  id="small" class="form-text text-light">
                     ID를 입력하세요.
                   </small>
                 </c:if>
@@ -65,13 +66,13 @@
                 <label for="input2-password">패스워드</label>
                 <input id="input2-password" type="password" name="password" class="form-control" />
                 <c:if test="${errors.password }">
-                  <small class="form-text text-light">
+                  <small  id="small" class="form-text text-light">
                     암호를 입력하세요.
                   </small>
                 </c:if>
                 
               </div>
-              <button type="submit" class="btn btn-primary">로그인</button>
+              <button type="submit" class="btn btn-secondary  btn-lg">로그인</button>
               
             </form>
   		</div>

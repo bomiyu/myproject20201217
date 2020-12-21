@@ -32,11 +32,16 @@
 .form-control {
 	font-size: 30px;
 }
+h1 {
+	color: white;
+	font-size: 40px;
+}
+
 </style>
 
 <title>Insert title here</title>
 </head>
-<body id="bgimg" class=" Nanum-Brush-Script" style="height:1500px">vv
+<body id="bgimg" class=" Nanum-Brush-Script" style="height:1500px">
 
 	<div class="container">
 		<img src="${pageContext.request.contextPath}/images/sprot1.jpg"

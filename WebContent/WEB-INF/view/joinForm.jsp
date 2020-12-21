@@ -90,7 +90,16 @@
 							<small  id="small" class=" form-text text-light"> 암호와 확인이 일치하지 않습니다. </small>
 						</c:if>
 					</div>
-					<button type="submit" class="btn btn-outline-primary">회원 가입</button>
+					<!-- 아래에서 data-toggle과 data-target 속성에서 data-toggle에는 modal 값을 data-target속성에는 모달 창 전체를 
+
+감싸는 div의 id 이름을 지정하면 된다. -->
+					<button type="submit" class="btn btn-secondary btn-lg"  >회원 가입</button>
+					
+	
+					
+
+
+
 				</form>
 			</div>
 			<div class="col-3"></div>

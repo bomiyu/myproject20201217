@@ -55,13 +55,13 @@
                 <input id="input1-curPwd" type="password" class="form-control" name="curPwd" />
                 
                 <c:if test="${errors.curPwd }">
-                  <small class="form-text text-light">
+                  <small id="small"  class="form-text text-light">
                현재 암호를 입력하세요.
                   </small>
                 </c:if>
                 
                    <c:if test="${errors.badCurPwd }">
-                  <small class="form-text text-light">
+                  <small id="small"  class="form-text text-light">
           		현재 암호와 일치하지 않습니다
                   </small>
      
@@ -81,7 +81,7 @@
                 </c:if>
                 
               </div>
-              <button type="submit" class="btn btn-primary">암호 변경</button>
+              <button type="submit" class="btn btn-secondary  btn-lg">암호 변경</button>
               
             </form>
   		</div>
