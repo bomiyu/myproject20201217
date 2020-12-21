@@ -46,7 +46,7 @@ label {
 
 <title>Insert title here</title>
 </head>
-<body class="bgimg Nanum-Brush-Script" style="height: 1500px">
+<body id="bgimg" class=" Nanum-Brush-Script" style="height:1500px">
 
 	<div class="container">
 		<img src="${pageContext.request.contextPath}/images/sprot1.jpg"

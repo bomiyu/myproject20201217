@@ -19,7 +19,7 @@
 
 <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'> 
 
-<link rel= "stylesheet" type="text/css" href="cssboard.css">
+<link rel= "stylesheet" type="text/css" href="cssboard.css?ver=1">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 <style>
 .Nanum-Brush-Script{font-family: 'Nanum Brush Script', sans-serif}
@@ -29,12 +29,11 @@
 	font-size:100px;
 }
 
-
 </style>
 
 <title>Insert title here</title>
 </head>
-<body class="bgimg Nanum-Brush-Script" style="height:1500px">
+<body id="bgimg" class=" Nanum-Brush-Script" style="height:1500px">
 
 	<div class="container">
 		<img src="${pageContext.request.contextPath}/images/sprot1.jpg"

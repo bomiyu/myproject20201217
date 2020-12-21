@@ -7,6 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="cssboard.css?after">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script
@@ -20,7 +22,7 @@
 <link href='https://fonts.googleapis.com/css?family=Poiret+One'
 	rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" type="text/css" href="cssboard.css">
+
 <link
 	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
 	rel="stylesheet">
@@ -42,11 +44,13 @@ label {
 .form-control {
 	font-size: 30px;
 }
+
+
 </style>
 
 <title>Insert title here</title>
 </head>
-<body class="bgimg Nanum-Brush-Script" style="height: 1500px">
+<body id="bgimg" class=" Nanum-Brush-Script" style="height:1500px">
 
 	<div class="container">
 		<img src="${pageContext.request.contextPath}/images/sprot1.jpg"
