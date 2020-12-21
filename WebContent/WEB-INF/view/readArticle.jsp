@@ -100,12 +100,12 @@ th {
       <th scope="row">제목</th>
       <td><c:out value="${articleData.article.title }"></c:out></td>
     </tr>
-        <tr>
+     <tr>
          <th scope="row">내용 </th>
       <td class="read-col"><c:out value="${articleData.content.content }"></c:out></td>
 
 
-    </tr>
+    </tr> 
       </tbody>
       
       

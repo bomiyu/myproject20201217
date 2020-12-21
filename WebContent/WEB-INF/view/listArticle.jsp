@@ -72,13 +72,15 @@ th {
 
 
 	<div class="container">
+
 		<div class="row">
 			<div class="col-1"></div>
 			<div class="col-10">
-
 				<h1>게시글 목록</h1>
 
 				<div class="list-container">
+
+
 					<table class="table table-striped">
 						<thead>
 							<tr>
