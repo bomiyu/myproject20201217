@@ -42,11 +42,23 @@ label {
 .form-control {
 	font-size: 30px;
 }
+#bgimg{
+		border: 0;
+    padding: 0; 
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url("../images/enha2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #a7acc7;
+	background-attachment: fixed;  /* 스크롤해도 배경이미지가 안움직이게끔 */
+}
 </style>
 
 <title>Insert title here</title>
 </head>
-<body id="bgimg" class=" Nanum-Brush-Script" style="height:1500px">
+<body id="bgimg" class="Nanum-Brush-Script" style="height:1500px">
 
 	<div class="container">
 		<img src="${pageContext.request.contextPath}/images/sprot1.jpg"
