@@ -76,7 +76,7 @@ label {
 			<div class="col-10">
 				<h1>게시글 쓰기</h1>
 				<form action="${root }/article/write.do" method="post">
-					<!-- div.form-group>label[for=input1-title]+input.form-control#input1-title[name=title] -->
+
 					<div class="form-group">
 						<label for="input1-title">제목</label> <input
 							value="${param.title }" type="text" class="form-control"
@@ -88,7 +88,7 @@ label {
 
 					<div class="form-group">
 						<label for="textarea1-content">내용</label>
-						<textarea name="" id="textarea1-content" cols="30" rows="10"
+						<textarea name="content" id="textarea1-content" cols="30" rows="10"
 							class="form-control">${param.content }</textarea>
 					</div>
 					<button type="submit" class="btn btn-secondary  btn-lg"

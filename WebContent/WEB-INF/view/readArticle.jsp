@@ -123,20 +123,29 @@ th {
       </tr>
     </table>
     
-    <%-- 
-    로그인 한 경우만
-    댓글 폼 출력
+ 
+<!--     로그인 한 경우만
+    댓글 폼 출력 -->
     
-    --%>
+   
     <u:replyForm articleNo="${articleData.article.number }"/>
     
     <u:listReply /> 
-    
+   
+     
+   
+     
             </div>
               <div class="col-1"></div>
+
+              
+              
       </div>
+      
     </div>
 
+ 
+ 
 </body>
 </html>
 

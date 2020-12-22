@@ -36,6 +36,8 @@ public class DeleteArticleService {
 		} catch (SQLException e) {
 			JdbcUtil.rollback(con);
 			throw new RuntimeException(e);
+		} finally {
+			JdbcUtil.close(con);
 		}
 		
 	}

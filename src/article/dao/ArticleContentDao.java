@@ -75,6 +75,8 @@ public class ArticleContentDao {
 			pstmt.setInt(1, no);
 			
 			pstmt.executeUpdate();
+		}finally {
+			JdbcUtil.close(con);
 		}
 	}
 }

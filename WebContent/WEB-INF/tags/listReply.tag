@@ -2,9 +2,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div>
-  <c:forEach items="${replyList }" var="reply">
+  <c:forEach items="${replyList }" var="reply" >
   <div>
-    <input type="text" value="${reply.body }" readonly />
+    <input type="text" value="${reply.body }" style="width: 700px" readonly />
     <span>${reply.memberId }</span>
   </div>
   </c:forEach>

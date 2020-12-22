@@ -1,8 +1,6 @@
-body, html { 
-
-    height: 100%;
+body, html {
+	height: 100%;
 }
-
 
 h1 {
 	color: white;
@@ -26,46 +24,44 @@ th {
 
 #bgimg {
 	border: 0;
-    padding: 0; 
-    min-height: 100%;
-    min-width: 100%;
-    background-image: url("./images/enha2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #a7acc7;
-	background-attachment: fixed;  /* 스크롤해도 배경이미지가 안움직이게끔 */
+	padding: 0;
+	min-height: 100%;
+	min-width: 100%;
+	background-image: url("./images/enha2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #a7acc7;
+	background-attachment: fixed; /* 스크롤해도 배경이미지가 안움직이게끔 */
+	overflow: auto;
 }
 
 .navbar.bg-dark {
-    background-color: rgba(0,0,0,.5) !important;
+	background-color: rgba(0, 0, 0, .5) !important;
 }
-
 
 /*listArticle*/
 .num-col {
-  width: 10%;
-  height: 200px;
+	width: 10%;
+	height: 200px;
 }
 
 .title-col {
-  width: 60%;
-  height: 200px;
+	width: 60%;
+	height: 200px;
 }
 
 .writer-col {
-  width: 20%;
-  height: 200px;
+	width: 20%;
+	height: 200px;
 }
 
 .read-col {
-  width: 10%;
-  height: 200px;
+	width: 10%;
+	height: 200px;
 }
 
-
-
 /*error메세지*/
-#small{
+#small {
 	font-size: 20px;
 }
