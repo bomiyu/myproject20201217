@@ -14,7 +14,7 @@
    --%>
   
 
-  <form class="form-inline" action="${root }/reply/add.do" method="post">
+  <form class="form-inline" action="${root }/jsp/board/comment/CommentWriteAction.co" method="post">
         <input type="number" value="${ articleNo}" name="no" hidden />
       <input type="number" value="${ param.pageNo}" name="pageNo" hidden />
     <input type="text" name="body" placeholder="댓글을 여기 입력하세요~" aria-label="Search" style="width:90%">

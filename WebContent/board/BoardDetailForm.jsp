@@ -156,7 +156,14 @@
 					${board.board_content}
 				</td>		
 			</tr>
-		
+			<tr>
+				<td id="title">
+					첨부파일
+				</td>
+				<td>
+					<a href='FileDownloadAction.bo?file_name=${board.board_file}'>${board.board_file}</a>
+				</td>	
+			</tr>
 	
 			<tr align="center" valign="middle">
 				<td colspan="5">
@@ -205,7 +212,7 @@
 						<a href="#" onclick="cmReplyOpen(${comment.comment_num})">[답변]</a><br>
 					<!-- 댓글 작성자만 수정, 삭제 가능하도록 -->	
 					<c:if test="${comment.comment_id == sessionScope.sessionID}">
-						<a href="#">[수정]</a><br/>	
+						<a href="#">[수정]</a><br>	
 						<a href="#">[삭제]</a>
 					</c:if>		
 					</div>
