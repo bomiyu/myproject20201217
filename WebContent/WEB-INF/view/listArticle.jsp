@@ -42,6 +42,9 @@
 	background-color: #a7acc7;
 	background-attachment: fixed; /* 스크롤해도 배경이미지가 안움직이게끔 */
 }
+.navbar.bg-dark {
+	background-color: rgba(0, 0, 0, .5) !important;
+}
 
 h1 {
 	color: white;
@@ -86,8 +89,8 @@ th {
 							<tr>
 								<th class="num-col text-center">No.</th>
 								<th class="title-col">제목</th>
-								<th class="writer-col">작성자</th>
-								<th class="read-col text-center">조회수</th>
+								<th class="writer-col" style="width: 70px">작성자</th>
+								<th class="read-col text-center" style="width: 70px">조회수</th>
 							</tr>
 						</thead>
 						<tbody>
