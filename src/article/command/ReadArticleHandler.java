@@ -11,11 +11,13 @@ import article.service.ArticleNotFoundException;
 import article.service.ReadArticleService;
 import mvc.command.CommandHandler;
 import reply.model.Reply;
+import reply.service.ReplyCountService;
 import reply.service.ReplyService;
 
 public class ReadArticleHandler implements CommandHandler {
 	private ReadArticleService readService = new ReadArticleService();
 	private ReplyService replyService = new ReplyService();
+	private ReplyCountService replyCountService = new ReplyCountService();
 
 	@Override
 	public String process(HttpServletRequest req, HttpServletResponse res) throws Exception {
@@ -25,6 +27,9 @@ public class ReadArticleHandler implements CommandHandler {
 		try {
 			ArticleData articleData = readService.getArticle(articleNum, true);
 			List<Reply> replyList = replyService.getReplyList(articleNum); 
+			int count = replyCountService.Count(articleNum);
+			
+			req.setAttribute("total", count);
 			req.setAttribute("articleData", articleData);
 			req.setAttribute("replyList", replyList);
 			return "readArticle";

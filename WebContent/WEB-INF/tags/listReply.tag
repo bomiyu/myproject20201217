@@ -6,12 +6,12 @@
 </style>
 
 <div>
-<h1>댓글</h1>
+<h1>댓글 : ${total }</h1>
 <hr class="line">
 
 	<table class="table" frame=void>
 		<c:forEach items="${replyList }" var="reply">
-			<c:set var="i" value="${i+1 }" />
+		<c:set var="i" value="${reply.id }"/>
 			<tbody>
 				<tr>
 					<th scope="row">${i}</th>
@@ -20,6 +20,7 @@
 					<td>${reply.regDate }</td>
 				</tr>
 			</tbody>
+				
 		</c:forEach>
 
 

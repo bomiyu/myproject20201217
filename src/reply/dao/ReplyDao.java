@@ -4,9 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import jdbc.JdbcUtil;
 import reply.model.Reply;
 
 public class ReplyDao {
@@ -30,14 +32,38 @@ public class ReplyDao {
 			
 			pstmt.executeUpdate();
 		}
+	}	
+	
+	
+	public int replyCount(Connection conn, int replyid) throws SQLException {
+	
+		
+		String sql = "SELECT COUNT(replyid) "
+				+ "FROM reply ";
+		
+		Statement stmt = null;
+		ResultSet rs = null;
+		
+		try {
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery(sql);
+			
+			if (rs.next()) {
+				return rs.getInt(1);
+			}
+			return 0;
+		} finally {
+			JdbcUtil.close(rs, stmt);
+		}
 	}
 
+
 	public List<Reply> listReply(Connection con, int articleNum) throws SQLException {
-		String sql = "SELECT replyid,"
-				+ " memberid,"
-				+ " article_no,"
-				+ " body,"
-				+ " regdate " + 
+		String sql = "SELECT replyid, "
+				+ "memberid, "
+				+ "article_no, "
+				+ "body, "
+				+ "regdate " + 
 				"FROM reply " + 
 				"WHERE article_no=? " + 
 				"ORDER BY replyid DESC";
