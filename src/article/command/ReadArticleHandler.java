@@ -23,11 +23,13 @@ public class ReadArticleHandler implements CommandHandler {
 	public String process(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		String noVal = req.getParameter("no");
 		int articleNum = Integer.parseInt(noVal);
+		int replycount = Integer.parseInt(noVal);
+		
 		
 		try {
 			ArticleData articleData = readService.getArticle(articleNum, true);
 			List<Reply> replyList = replyService.getReplyList(articleNum); 
-			int count = replyCountService.Count(articleNum);
+			Reply count = replyCountService.Count(replycount);
 			
 			req.setAttribute("total", count);
 			req.setAttribute("articleData", articleData);

@@ -6,14 +6,15 @@ import java.sql.SQLException;
 import jdbc.ConnectionProvider;
 import jdbc.JdbcUtil;
 import reply.dao.ReplyDao;
+import reply.model.Reply;
 
 public class ReplyCountService {
 private ReplyDao dao = new ReplyDao();
-public int Count(int replyid) {
+public Reply Count(int replycount) {
 	Connection conn = ConnectionProvider.getConnection();
 	
 	try {
-		int count = dao.replyCount(conn, replyid);
+		Reply count = dao.replyCount(conn, replycount);
 		
 		return count;
 		

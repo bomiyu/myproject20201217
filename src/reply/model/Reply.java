@@ -8,13 +8,14 @@ public class Reply {
 	private int articleNum;
 	private String body;
 	private Date regDate;
-	private int replyid;
+	private int replycount;
+
 	
-	public int getReplyid() {
-		return replyid;
+	public int getReplycount() {
+		return replycount;
 	}
-	public void setReplyid(int replyid) {
-		this.replyid = replyid;
+	public void setReplycount(int replycount) {
+		this.replycount = replycount;
 	}
 	public int getId() {
 		return id;

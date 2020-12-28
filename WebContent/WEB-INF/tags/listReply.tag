@@ -6,7 +6,7 @@
 </style>
 
 <div>
-<h1>댓글 : ${total }</h1>
+ <h3>댓글 수 : ${total.replycount }</h3>
 <hr class="line">
 
 	<table class="table" frame=void>

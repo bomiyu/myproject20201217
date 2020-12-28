@@ -4,11 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import article.model.Article;
+import article.model.ArticleContent;
 import jdbc.JdbcUtil;
+import member.model.Member;
 import reply.model.Reply;
 
 public class ReplyDao {
@@ -35,29 +37,40 @@ public class ReplyDao {
 	}	
 	
 	
-	public int replyCount(Connection conn, int replyid) throws SQLException {
-	
+	public Reply replyCount(Connection conn, int no) throws SQLException {
 		
-		String sql = "SELECT COUNT(replyid) "
-				+ "FROM reply ";
 		
-		Statement stmt = null;
+		Reply reply = null;
+
+		String sql = "SELECT count(replyid) " + "FROM reply " + "WHERE article_no=?";
+
+		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		
+
 		try {
-			stmt = conn.createStatement();
-			rs = stmt.executeQuery(sql);
-			
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, no);
+
+			rs = pstmt.executeQuery();
+
 			if (rs.next()) {
-				return rs.getInt(1);
+				reply = new Reply();
+				reply.setReplycount(rs.getInt(1));
+
 			}
-			return 0;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
 		} finally {
-			JdbcUtil.close(rs, stmt);
+			JdbcUtil.close(rs, pstmt);
 		}
+
+		return reply;
+		
+		
+		
 	}
-
-
 	public List<Reply> listReply(Connection con, int articleNum) throws SQLException {
 		String sql = "SELECT replyid, "
 				+ "memberid, "
