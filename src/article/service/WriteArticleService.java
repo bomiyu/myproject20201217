@@ -14,14 +14,14 @@ public class WriteArticleService {
 	private ArticleDao articleDao = new ArticleDao();
 	private ArticleContentDao contentDao = new ArticleContentDao();
 	
-	public Integer write(WriteRequest req) {
+	public Integer write(WriteRequest writeReq) {
 		Connection conn = null;
 		
 		try {
 			conn = ConnectionProvider.getConnection();
 			conn.setAutoCommit(false);
 			
-			Article article = toArticle(req);
+			Article article = toArticle(writeReq);
 			Article savedArticle = articleDao.insert(conn, article);
 			
 			if (savedArticle == null) {
@@ -30,7 +30,7 @@ public class WriteArticleService {
 			
 			ArticleContent content = new ArticleContent(
 					savedArticle.getNumber(),
-					req.getContent()
+					writeReq.getContent()
 					);
 			
 			ArticleContent savedContent = contentDao.insert(conn, content);
@@ -53,8 +53,8 @@ public class WriteArticleService {
 		}
 	}
 	
-	private Article toArticle(WriteRequest req) {
-		return new Article(null, req.getWriter(), req.getTitle(), null, null, 0);
+	private Article toArticle(WriteRequest writeReq) {
+		return new Article(null, writeReq.getWriter(), writeReq.getTitle(), null, null, 0);
 	}
 }
 
