@@ -32,7 +32,9 @@
 .form-control {
 	font-size: 30px;
 }
-
+.navbar.bg-dark {
+	background-color: rgba(0, 0, 0, .5) !important;
+}
 #bgimg {
 	border: 0;
 	padding: 0;

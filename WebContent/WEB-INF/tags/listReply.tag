@@ -6,12 +6,12 @@
 </style>
 
 <div>
- <h3>댓글 수 : ${total.replycount }</h3>
+ <h3 style="color:white";>댓글 수 : ${total.replycount }</h3>
 <hr class="line">
 
 	<table class="table" frame=void>
 		<c:forEach items="${replyList }" var="reply">
-		<c:set var="i" value="${reply.id }"/>
+		<c:set var="i" value="${i+1 }"/>
 			<tbody>
 				<tr>
 					<th scope="row">${i}</th>

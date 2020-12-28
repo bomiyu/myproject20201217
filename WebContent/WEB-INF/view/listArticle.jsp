@@ -88,10 +88,10 @@ th {
 						<thead>
 							<tr>
 								<th class="num-col text-center">No.</th>
-								<th class="title-col">제목[댓글수]</th>
+								<th class="title-col">제목</th>
 								<th class="writer-col" style="width: 70px">작성자</th>
 								<th class="read-col text-center" style="width: 70px">조회수</th>
-								<td>댓글수</td>
+						
 							</tr>
 						</thead>
 						<tbody>
@@ -101,10 +101,10 @@ th {
 									<td><a
 										href="${root }/article/read.do?no=${article.number }&pageNo=${articlePage.currentPage}"
 										class="text-light"> <c:out value="${article.title }" />
-									</a></td>
+									</a>  </td>
 									<td>${article.writer.name }</td>
 									<td class="text-center">${article.readCount }</td>
-									<td>[${Reply.replycount }]</td>
+								
 								</tr>
 							</c:forEach>
 						</tbody>

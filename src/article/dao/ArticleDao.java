@@ -74,6 +74,7 @@ public class ArticleDao {
 				+ "ORDER BY articl_no DESC "
 				+ "LIMIT ?, ?"; // 시작 row_num(zerobase), 갯수
 		*/
+	
 		String sql = "SELECT "
 				+ "rn, "
 				+ "article_no, "
@@ -100,7 +101,20 @@ public class ArticleDao {
 				+ "  FROM article "
 				+ ") WHERE rn "
 				+ "    BETWEEN ? AND ?";
-		
+	
+		/*
+		 * String sql = "SELECT " + "a.rn, " + "a.article_no, " + "writer_id, " +
+		 * "writer_name, " + "title, " + "regdate, " + "moddate, " + "read_cnt," +
+		 * "b.reply_cnt " + "FROM (" + "	SELECT article_no, " +
+		 * " 		   writer_id, " + "        writer_name, " + "        title, " +
+		 * "        regdate, " + "        moddate, " + "        read_cnt, " +
+		 * "        ROW_NUMBER() " + "          OVER ( " + "            ORDER BY " +
+		 * "            article_no " + "            DESC) " + "        rn " +
+		 * "  FROM article " + ") a, " +
+		 * " (SELECT article_no, count(*) reply_cnt FROM reply GROUP BY article_no) b "
+		 * + " WHERE a.article_no = b.article_no AND " + "       rn BETWEEN ? AND ? " +
+		 * " ORDER BY a.rn DESC ";
+		 */
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
@@ -131,7 +145,8 @@ public class ArticleDao {
 					rs.getTimestamp("regdate"),
 					rs.getTimestamp("moddate"),
 					rs.getInt("read_cnt")
-				);
+//					rs.getInt("reply_cnt")
+				); 
 	}
 	
 	public int selectCount(Connection conn) throws SQLException {
