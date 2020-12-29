@@ -74,14 +74,25 @@ public class ArticleDao {
 		 * "    BETWEEN ? AND ?";
 		 */
 
-		String sql = "SELECT " + "a.rn, " + "a.article_no, " + "writer_id, " + "writer_name, " + "title, " + "regdate, "
-				+ "moddate, " + "read_cnt," + "b.reply_cnt " + "FROM (" + "	SELECT article_no, "
-				+ " 		   writer_id, " + "        writer_name, " + "        title, " + "        regdate, "
-				+ "        moddate, " + "        read_cnt, " + "        ROW_NUMBER() " + "          OVER ( "
-				+ "            ORDER BY " + "            article_no " + "            DESC) " + "        rn "
-				+ "  FROM article " + ") a, "
-				+ " (SELECT article_no, count(*) reply_cnt FROM reply GROUP BY article_no) b "
-				+ " WHERE a.article_no = b.article_no AND " + "       rn BETWEEN ? AND ? " + " ORDER BY a.rn DESC ";
+		String sql = "SELECT a.rn, "
+				+"a.article_no, "
+				+"writer_id, "
+				+"writer_name, "
+				+"title, regdate, "
+				+"moddate, "
+				+"read_cnt, "
+				+"nvl(b.reply_cnt, 0) reply_cnt FROM (	SELECT article_no, "
+				+"writer_id, "
+				+"writer_name, "
+				+"title, "
+				+"regdate, "
+				+"moddate, "
+				+"read_cnt, "
+				+"ROW_NUMBER() OVER ( ORDER BY article_no DESC) rn FROM article ) a, "
+				+"(SELECT article_no, "
+				+"count(*) reply_cnt FROM reply GROUP BY article_no) b WHERE a.article_no "
+				+"= b.article_no(+) AND "
+				+"rn BETWEEN ? AND ?  ORDER BY a.rn";
 
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;

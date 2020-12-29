@@ -86,7 +86,7 @@ th {
 
 					<table class="table table-striped">
 						<thead>
-							<tr>
+							<tr class="table-active">
 								<th class="num-col text-center">No.</th>
 								<th class="title-col">제목[댓글수]</th>
 								<th class="writer-col" style="width: 70px">작성자</th>

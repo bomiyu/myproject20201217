@@ -28,7 +28,9 @@
 .Nanum-Brush-Script {
 	font-family: 'Nanum Brush Script', sans-serif
 }
-
+.navbar.bg-dark {
+	background-color: rgba(0, 0, 0, .5) !important;
+}
 .form-control {
 	font-size: 30px;
 }
@@ -87,21 +89,21 @@ th {
     <tbody>
     	
         <tr>
-      <th scope="row" style="width:15%">번호</th>
+      <th class="table-active" scope="row" style="width:15%">번호</th>
       <td>${articleData.article.number }</td>
 
     </tr>
     <tr>
-      <th scope="row">작성자</th>
+      <th class="table-active" scope="row">작성자</th>
       <td>${articleData.article.writer.name }</td>
 
     </tr>
     <tr>
-      <th scope="row">제목</th>
+      <th class="table-active" scope="row">제목</th>
       <td><c:out value="${articleData.article.title }"></c:out></td>
     </tr>
      <tr>
-         <th scope="row">내용 </th>
+         <th class="table-active"scope="row">내용 </th>
       <td class="read-col"><c:out value="${articleData.content.content }"></c:out></td>
 
 
