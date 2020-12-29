@@ -9,7 +9,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="${root }/index.jsp">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="${root }/index.jsp"><i class="fas fa-dumbbell"></i> Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="${root }/article/list.do">글 목록</a>
@@ -35,10 +35,10 @@
 	<u:isLogin>
 		<ul class="navbar-nav">
 			<li class="nav-item"><a href="${root }/removeMember.do"
-				class="nav-link"> <i class="fas fa-door-open"></i> 탈퇴
+				class="nav-link">  탈퇴
 			</a></li>
 			<li class="nav-item"><a href="${root }/changePwd.do"
-				class="nav-link"><i class="fas fa-user-edit"></i> 변경</a></li>
+				class="nav-link">변경</a></li>
 			<li class="nav-item"><a href="${root }/logout.do"
 				class="nav-link"><i class="fas fa-sign-out-alt"></i> 로그아웃</a></li>
 		</ul>
