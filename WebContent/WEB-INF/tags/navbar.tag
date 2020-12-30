@@ -9,7 +9,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="${root }/index.jsp"><i class="fas fa-dumbbell"></i> Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="${root }/index.jsp"><i class="fas fa-dumbbell"></i>추천 음악영상 & Main<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="${root }/article/list.do">글 목록</a>
@@ -24,8 +24,7 @@
 
 	<u:notLogin>
 		<ul class="navbar-nav">
-			<li class="nav-item"><a href="${root }/join.do" class="nav-link"><i
-					class="fas fa-file-alt"></i> 회원가입</a></li>
+			<li class="nav-item"><a href="${root }/join.do" class="nav-link"> 회원가입</a></li>
 			<li class="nav-item"><a href="${root }/login.do"
 				class="nav-link"> <i class="fas fa-sign-in-alt"></i> 로그인
 			</a></li>

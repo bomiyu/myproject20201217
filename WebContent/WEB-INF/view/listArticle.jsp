@@ -101,7 +101,7 @@ th {
 									<td><a
 										href="${root }/article/read.do?no=${article.number }&pageNo=${articlePage.currentPage}"
 										class="text-light"> <c:out value="${article.title }" />
-									</a>[${article.replyCnt }]</td>
+									</a><span class="badge badge-pill badge-light">${article.replyCnt }</span></td>
 									<td>${article.writer.name }</td>
 									<td class="text-center">${article.readCount }</td>
 								

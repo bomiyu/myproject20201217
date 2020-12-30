@@ -32,9 +32,11 @@
 .form-control {
 	font-size: 30px;
 }
+
 .navbar.bg-dark {
 	background-color: rgba(0, 0, 0, .5) !important;
 }
+
 #bgimg {
 	border: 0;
 	padding: 0;
@@ -81,8 +83,8 @@ label {
 
 					<div class="form-group">
 						<label for="input1-title">제목</label> <input
-							value="${param.title }" type="text" class="form-control"
-							id="input1-title" name="title" />
+							value="${param.title }" type="text"
+							class="form-control shadow p-3  " id="input1-title" name="title" />
 						<c:if test="${errors.title }">
 							<small class="form-text text-light"> 제목을 입력하세요. </small>
 						</c:if>
@@ -90,8 +92,8 @@ label {
 
 					<div class="form-group">
 						<label for="textarea1-content">내용</label>
-						<textarea name="content" id="textarea1-content" cols="30" rows="10"
-							class="form-control">${param.content }</textarea>
+						<textarea name="content" id="textarea1-content" cols="30"
+							rows="10" class="form-control shadow p-3 ">${param.content }</textarea>
 					</div>
 					<button type="submit" class="btn btn-secondary  btn-lg"
 						data-toggle="modal" data-target="#myModal">글 등록</button>
