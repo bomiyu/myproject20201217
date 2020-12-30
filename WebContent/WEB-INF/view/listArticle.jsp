@@ -60,6 +60,21 @@ th {
 	color: white;
 	font-size: 20px;
 }
+.num-col {
+	width: 10%;
+}
+
+.title-col {
+	width: 60%;
+}
+
+.writer-col {
+	width: 20%;
+}
+
+.read-col {
+	width: 10%;
+}
 </style>
 
 <title>Insert title here</title>
@@ -77,8 +92,8 @@ th {
 	<div class="container">
 
 		<div class="row">
-			<div class="col-1"></div>
-			<div class="col-10">
+			<div class="col-0"></div>
+			<div class="col-12">
 				<h1>게시글 목록</h1>
 
 				<div class="list-container">
@@ -140,7 +155,7 @@ th {
 
 				</div>
 			</div>
-			<div class="col-1"></div>
+			<div class="col-0"></div>
 		</div>
 	</div>
 
