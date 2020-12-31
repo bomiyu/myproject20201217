@@ -20,7 +20,7 @@
 <link href='https://fonts.googleapis.com/css?family=Poiret+One'
 	rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" type="text/css" href="cssboard.css?ver=1">
+<link rel="stylesheet" type="text/css" href="cssboard.css">
 <link
 	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
 	rel="stylesheet">

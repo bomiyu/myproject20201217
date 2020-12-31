@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="cssboard.css?ver=1">
+<link rel="stylesheet" type="text/css" href="cssboard.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script
@@ -75,6 +75,10 @@ th {
 .read-col {
 	width: 10%;
 }
+
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: rgba(127, 127, 127, 0.3);
+}
 </style>
 
 <title>Insert title here</title>
@@ -92,16 +96,16 @@ th {
 	<div class="container">
 
 		<div class="row">
-			<div class="col-0"></div>
-			<div class="col-12">
+			<div class="col-1"></div>
+			<div class="col-10">
 				<h1>게시글 목록</h1>
 
-				<div class="list-container">
+				<div>
 
 
-					<table class="table table-striped">
+					<table class="table table-striped table-hover">
 						<thead>
-							<tr class="table-active">
+							<tr>
 								<th class="num-col text-center">No.</th>
 								<th class="title-col">제목[댓글수]</th>
 								<th class="writer-col" style="width: 70px">작성자</th>
@@ -109,9 +113,9 @@ th {
 						
 							</tr>
 						</thead>
-						<tbody>
+						<tbody >
 							<c:forEach var="article" items="${articlePage.content }">
-								<tr>
+								<tr style="height:10px;">
 									<td class="text-center">${article.number }</td>
 									<td><a
 										href="${root }/article/read.do?no=${article.number }&pageNo=${articlePage.currentPage}"
@@ -155,7 +159,7 @@ th {
 
 				</div>
 			</div>
-			<div class="col-0"></div>
+			<div class="col-1"></div>
 		</div>
 	</div>
 

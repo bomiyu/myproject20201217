@@ -85,46 +85,40 @@ th {
       <div class="col-10">
       
 
-    <table class="table">
+    <table class="table table-striped">
     <tbody>
     	
         <tr>
-      <th class="table-active" scope="row" style="width:15%">번호</th>
+      <th scope="row" style="width:15%">번호</th>
       <td>${articleData.article.number }</td>
-
+   <th scope="row" style="width:15%">작성자</th>
+      <td class="text-left">${articleData.article.writer.name }</td>
     </tr>
+ 
     <tr>
-      <th class="table-active" scope="row">작성자</th>
-      <td>${articleData.article.writer.name }</td>
-
-    </tr>
-    <tr>
-      <th class="table-active" scope="row">제목</th>
-      <td><c:out value="${articleData.article.title }"></c:out></td>
+      <th scope="row">제목</th>
+      <td colspan="3"><c:out value="${articleData.article.title }"></c:out></td>
     </tr>
      <tr>
-         <th class="table-active"scope="row">내용 </th>
-      <td class="read-col"><c:out value="${articleData.content.content }"></c:out></td>
+         <th scope="row">내용 </th>
+      <td colspan="3" class="read-col"><c:out value="${articleData.content.content }"></c:out></td>
 
 
     </tr> 
       </tbody>
-      
-      
-      <tr>
-        <td colspan="2"><c:set var="pageNo"
+
+    </table>
+    
+
+       <c:set var="pageNo"
             value="${empty param.pageNo ? '1' : param.pageNo }" /> <a
           href="list.do?pageNo=${pageNo}" class="text-light">[목록]</a>
           <c:if
             test="${authUser.id == articleData.article.writer.id}">
             <a href="modify.do?no=${articleData.article.number }" class="text-light">[게시글수정]</a>
             <a href="delete.do?no=${articleData.article.number }" class="text-light">[게시글삭제]</a>
-          </c:if></td>
-      </tr>
-      <tr>
-      </tr>
-    </table>
-    
+          </c:if>
+
  
 <!--     로그인 한 경우만
     댓글 폼 출력 -->
